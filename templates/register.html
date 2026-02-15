@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenVault - Create Account</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>🛡️ Create OpenVault Account</h2>
+                <p class="subtitle">Set your master password carefully</p>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" name="username" required placeholder="Pick a username">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email (Optional)</label>
+                    <input type="email" id="reg-email" name="email" placeholder="student@campus.edu">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Master Password</label>
+                    <input type="password" id="reg-password" name="password" required placeholder="Choose a strong master password">
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm">Confirm Password</label>
+                    <input type="password" id="reg-confirm" name="confirm" required placeholder="Repeat master password">
+                </div>
+                <div id="reg-error" class="alert alert-error" style="display: none;"></div>
+                <button type="submit" class="btn btn-success btn-block">Register Vault</button>
+            </form>
+            <div class="card-footer">
+                <p>Already have a vault? <a href="/login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

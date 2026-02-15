@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenVault - Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>🔐 OpenVault</h2>
+                <p class="subtitle">Enter your master credentials to unlock</p>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Master Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter master password">
+                </div>
+                <div id="error-message" class="alert alert-error" style="display: none;"></div>
+                <button type="submit" class="btn btn-primary btn-block">Unlock Vault</button>
+            </form>
+            <div class="card-footer">
+                <p>New to OpenVault? <a href="/register">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
