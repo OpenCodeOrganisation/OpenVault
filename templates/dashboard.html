@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenVault - Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="app-nav">
+        <div class="nav-brand">🛡️ OpenVault</div>
+        <div class="nav-actions">
+            <span id="nav-user">User</span>
+            <button id="btn-logout" class="btn btn-outline">Logout</button>
+        </div>
+    </header>
+    <main class="dashboard-container">
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Passwords</h3>
+                <p id="stat-count" class="stat-number">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Security Status</h3>
+                <p class="stat-number stat-good">Good</p>
+            </div>
+            <div class="stat-card">
+                <h3>Vault State</h3>
+                <p class="stat-number" id="vault-state-text">Unlocked</p>
+            </div>
+        </section>
+        <section class="quick-links">
+            <a href="/vault" class="btn btn-primary">Open Password Vault →</a>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenVault - Password Vault</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="app-nav">
+        <div class="nav-brand">🛡️ OpenVault / Vault</div>
+        <div class="nav-actions">
+            <a href="/dashboard" class="btn btn-outline">Dashboard</a>
+            <button id="btn-add-entry" class="btn btn-primary">+ New Entry</button>
+        </div>
+    </header>
+    <main class="vault-container">
+        <div class="search-bar-wrap">
+            <input type="text" id="search-input" placeholder="Search passwords by title, username, category...">
+        </div>
+        <table class="vault-table" id="entries-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="entries-tbody">
+                <tr><td colspan="5" class="text-center">Loading vault secrets...</td></tr>
+            </tbody>
+        </table>
+    </main>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
