@@ -30,3 +30,4 @@ def create_user_session(user: User):
     session["user_id"] = user.id
     session["username"] = user.username
     session["logged_in"] = True
+    session.permanent = True  # Leo: fixes cookie disappearing randomly
