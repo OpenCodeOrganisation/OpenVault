@@ -106,3 +106,35 @@ def search_vault_entries(user_id: int, query: str, db_path=None) -> List[VaultEn
             )
             for r in rows
         ]
+
+
+def create_secure_note(user_id: int, title: str, encrypted_content: str, db_path=None) -> int:
+    with get_db_connection(db_path) as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO secure_notes (user_id, title, encrypted_content) VALUES (?, ?, ?)",
+            (user_id, title, encrypted_content)
+        )
+        return cursor.lastrowid
+
+def get_notes_for_user(user_id: int, db_path=None) -> List[SecureNote]:
+    with get_db_connection(db_path) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM secure_notes WHERE user_id = ? ORDER BY title ASC", (user_id,))
+        rows = cursor.fetchall()
+        return [
+            SecureNote(
+                id=r["id"],
+                user_id=r["user_id"],
+                title=r["title"],
+                encrypted_content=r["encrypted_content"],
+                created_at=str(r["created_at"])
+            )
+            for r in rows
+        ]
+
+def delete_secure_note(note_id: int, user_id: int, db_path=None) -> bool:
+    with get_db_connection(db_path) as conn:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM secure_notes WHERE id = ? AND user_id = ?", (note_id, user_id))
+        return cursor.rowcount > 0
