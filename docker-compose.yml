@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  openvault:
+    build: .
+    container_name: openvault-app
+    ports:
+      - "5000:5000"
+    environment:
+      - OPENVAULT_SECRET_KEY=change-this-insecure-key-in-production-12345
+      - OPENVAULT_DB=/app/data/openvault.db
+      - OPENVAULT_ENV=development
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
