@@ -1,6 +1,5 @@
 # OpenVault 🔐
 
-[![Tests](https://github.com/OpenCodeOrganisation/OpenVault/actions/workflows/tests.yml/badge.svg)](https://github.com/OpenCodeOrganisation/OpenVault/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![Version](https://img.shields.io/badge/version-0.4.0-green.svg)](CHANGELOG.md)
